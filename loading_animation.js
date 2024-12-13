@@ -1,3 +1,5 @@
+console.log("JavaScript is working!");
+
 document.addEventListener("DOMContentLoaded", function () {
   const loader = document.getElementById("loader");
   const dots = document.querySelector(".dots");
