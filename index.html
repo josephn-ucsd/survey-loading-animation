@@ -3,20 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Survey Loading Animation</title>
-  <link rel="stylesheet" href="loading_animation.css">
+  <title>Loading Animation</title>
+  <!-- Correctly link CSS file -->
+  <link rel="stylesheet" href="./loading_animation.css">
 </head>
 <body>
-  <div class="loader" id="loader">
+  <div id="loader" class="loader">
     <h1>ANALYZING SURVEY</h1>
     <span></span>
     <span></span>
     <span></span>
   </div>
-  <div class="completed" id="completed" style="display: none;">
+
+  <div style="display: none;" id="completed" class="completed">
     <h1>ANALYSIS COMPLETE!</h1>
     <div class="green-circle">&nbsp;</div>
   </div>
-  <script src="loading_animation.js"></script>
+
+  <!-- Correctly link JS file -->
+  <script src="./loading_animation.js"></script>
 </body>
 </html>
