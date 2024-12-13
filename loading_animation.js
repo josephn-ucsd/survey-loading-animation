@@ -1,22 +1,16 @@
-console.log("JavaScript is working!");
-
 document.addEventListener("DOMContentLoaded", function () {
   const loader = document.getElementById("loader");
-  const dots = document.querySelector(".dots");
+  const completed = document.getElementById("completed");
   const statusText = document.getElementById("status-text");
+  const dots = document.querySelector(".dots");
 
   // Set the duration to match the animation time
   const animationDuration = 3000; // 3 seconds
 
   // Transition from loading to completed
   setTimeout(() => {
-    // Update status text
-    statusText.textContent = "ANALYSIS COMPLETE!";
-    
-    // Replace dots with a green circle and check mark
-    dots.innerHTML = ''; // Clear dots
-    const greenCircle = document.createElement("div");
-    greenCircle.classList.add("green-circle");
-    dots.appendChild(greenCircle);
+    // Hide the loader and display the completed message
+    loader.style.display = "none";
+    completed.style.display = "block";
   }, animationDuration);
 });
