@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rich Text Editor</title>
+  <style>
+    /* Insert CSS here */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+
+    .editor-container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .toolbar button {
+      padding: 10px 15px;
+      border: 1px solid #ddd;
+      background: #f9f9f9;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .toolbar button:hover {
+      background: #ddd;
+    }
+
+    .editor {
+      min-height: 200px;
+      border: 1px solid #ddd;
+      padding: 10px;
+      background: #fff;
+      overflow: auto;
+      outline: none;
+      line-height: 1.6;
+    }
+
+    .editor:focus {
+      border-color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <div class="editor-container">
+    <div class="toolbar">
+      <button onclick="formatText('bold')"><b>B</b></button>
+      <button onclick="formatText('italic')"><i>I</i></button>
+      <button onclick="formatText('underline')"><u>U</u></button>
+      <button onclick="formatText('insertOrderedList')">OL</button>
+      <button onclick="formatText('insertUnorderedList')">UL</button>
+      <button onclick="clearFormatting()">Clear</button>
+    </div>
+    <div class="editor" contenteditable="true">
+      Start typing here...
+    </div>
+  </div>
+  <script>
+    // Insert JavaScript here
+    function formatText(command) {
+      document.execCommand(command, false, null);
+    }
+
+    function clearFormatting() {
+      document.execCommand('removeFormat', false, null);
+      document.execCommand('unlink', false, null);
+    }
+  </script>
+</body>
+</html>
