@@ -1,3 +1,9 @@
+if (statusText) {
+  statusText.textContent = "ANALYSIS COMPLETE!";
+} else {
+  console.error("Element with id 'status-text' not found.");
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const loader = document.getElementById("loader");
   const completed = document.getElementById("completed");
