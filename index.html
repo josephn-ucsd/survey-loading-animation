@@ -1,22 +1,22 @@
-<link rel="stylesheet" href="loading_animation.css">
-<script src="loading_animation.js"></script>
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Actor" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Loading Animation</title>
+  <link rel="stylesheet" href="loading_animation.css">
 </head>
-
 <body>
   <div class="loader" id="loader">
-    <h1 id="status-text">ANALYZING SURVEY</h1>
-    <div class="dots">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+    <h1>ANALYZING SURVEY</h1>
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
-
-  <script src="js/script.js"></script>
+  <div class="completed" id="completed" style="display: none;">
+    <h1>ANALYSIS COMPLETE!</h1>
+    <div class="green-circle">&nbsp;</div>
+  </div>
+  <script src="loading_animation.js"></script>
 </body>
 </html>
